@@ -1,0 +1,5 @@
+//Создайте систему для чтения и записи данных из разных форматов файлов (например, CSV, JSON, XML) с помощью адаптеров.
+public interface DataAdapter {
+    List<DataObject> readData(String filePath);
+    void writeData(List<DataObject> data, String filePath);
+}
