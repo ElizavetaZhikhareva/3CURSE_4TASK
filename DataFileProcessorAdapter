@@ -1,0 +1,19 @@
+public static void main(String[] args) {
+    DataFileProcessor processor;
+    
+    // Выбор адаптера в зависимости от формата файла
+    if (args[0].endsWith(".csv")) {
+        processor = new DataFileProcessor(new CsvDataAdapter());
+    } else if (args[0].endsWith(".json")) {
+        processor = new DataFileProcessor(new JsonDataAdapter());
+    } else if (args[0].endsWith(".xml")) {
+        processor = new DataFileProcessor(new XmlDataAdapter());
+    } else {
+        throw new IllegalArgumentException("Unsupported file format");
+    }
+
+    List<DataObject> data = processor.readDataFromFile(args[0]);
+    // Обработка данных
+
+    processor.writeDataToFile(data, args[1]);
+}
