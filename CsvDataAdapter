@@ -1,0 +1,11 @@
+public class CsvDataAdapter implements DataAdapter {
+    // Реализация методов для чтения и записи данных в формате CSV
+}
+
+public class JsonDataAdapter implements DataAdapter {
+    // Реализация методов для чтения и записи данных в формате JSON
+}
+
+public class XmlDataAdapter implements DataAdapter {
+    // Реализация методов для чтения и записи данных в формате XML
+}
