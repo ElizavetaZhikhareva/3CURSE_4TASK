@@ -1,0 +1,15 @@
+public class DataFileProcessor {
+    private DataAdapter adapter;
+
+    public DataFileProcessor(DataAdapter adapter) {
+        this.adapter = adapter;
+    }
+
+    public List<DataObject> readDataFromFile(String filePath) {
+        return adapter.readData(filePath);
+    }
+
+    public void writeDataToFile(List<DataObject> data, String filePath) {
+        adapter.writeData(data, filePath);
+    }
+}
